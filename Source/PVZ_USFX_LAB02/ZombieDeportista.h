@@ -17,7 +17,7 @@ class PVZ_USFX_LAB02_API AZombieDeportista : public AZombie
 	public :
 		AZombieDeportista();
 
-		// bHasMoved tiene la funcion para que se active si el zombie se mueva 
+		// bHasMoved tiene la funcion para que se active si el zombie se mueva o no 
 		bool bHasMoved = false;
 
 		

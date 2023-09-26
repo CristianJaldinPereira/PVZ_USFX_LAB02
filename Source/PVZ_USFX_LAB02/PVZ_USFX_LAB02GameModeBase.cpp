@@ -80,6 +80,10 @@ APVZ_USFX_LAB02GameModeBase::APVZ_USFX_LAB02GameModeBase()
 
 }
 
+void APVZ_USFX_LAB02GameModeBase::Tick(float DeltaTime)
+{
+}
+
 void APVZ_USFX_LAB02GameModeBase::Spawn()
 {
 	contador2++;

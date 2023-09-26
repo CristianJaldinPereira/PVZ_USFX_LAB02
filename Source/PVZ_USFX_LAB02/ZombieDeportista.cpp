@@ -33,7 +33,7 @@ void AZombieDeportista::MoveOutOfLane()
 		bHasMoved = true;
 	}
 }
-
+// la implementación de la función de salto a otra linea se hice en el GameModeBase.h donde se cambio la cantidad de zombis spawneados a 1 para ver si funciona
 
 
 

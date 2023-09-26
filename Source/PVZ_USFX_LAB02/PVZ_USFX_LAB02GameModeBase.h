@@ -41,7 +41,7 @@ private:
 		// 
 		//AZombie* Zombie1 = GetWorld()->SpawnActor<AZombie>(AZombie::StaticClass(), FVector(400.0, 200.0, 100.0), FRotator::ZeroRotator);
 
-		GetWorld()->GetTimerManager().SetTimer(MoveTimerHandle, this, &APVZ_USFX_LAB02GameModeBase::MoveOutOfLane, 5.0f, false);
+		
 
 
 		World->GetTimerManager().SetTimer(Temporizador, this, &APVZ_USFX_LAB02GameModeBase::Spawn, 2, true);
@@ -52,21 +52,6 @@ private:
 
 		//Definiendo la posición de los zombies
 		FVector SpawnLocationZombie = FVector(-920.0f, 400.0f, 22.0f);
-
-		// Genera 5 zombies
-		////for (int i = 0; i < 7; i++) {
-		////	// Define una posición temporal para el zombie en X
-		////	SpawnLocationZombie.X += 100;
-		////	// Aparicion de los zombies
-
-
-		////	NuevoZombie = GetWorld()->SpawnActor<AZombieComun>(AZombieComun::StaticClass(), SpawnLocationZombie, FRotator::ZeroRotator);
-
-		////	NuevoZombie->Velocidad = FMath::FRandRange(0.1, 0.1);
-
-		////	Zombies.Add(NuevoZombie);
-
-		////}
 
 
 
@@ -85,7 +70,7 @@ private:
 			Zombies.Add(NuevoZombieDeportista);
 		}
 		//Esta parte del codigo es para que el zombie se mueva a una posicion aleatoria cada cierto tiempo
-		GetWorld()->GetTimerManager().SetTimer(MoveTimerHandle, this, &AZombieDeportista::MoveOutOfLane, 5.0f, false);
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AZombieDeportista::MoveOutOfLane, 5.0f, false);
 
 
 
@@ -155,7 +140,7 @@ private:
 
 
 
-	FTimerHandle MoveTimerHandle;
+	
 	
 
 
@@ -168,7 +153,7 @@ public:
 	FTimerHandle Temporizador;
 
 
-
+	FTimerHandle MoveTimerHandle;
 	void Spawn();
 
 	FVector contador;
